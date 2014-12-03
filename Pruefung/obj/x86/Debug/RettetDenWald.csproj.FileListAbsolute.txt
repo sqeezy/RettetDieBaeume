@@ -1,0 +1,6 @@
+C:\Users\anton.herzog\Projects\Pruefung_trunk\Pruefung\bin\x86\Debug\RettetDenWald.exe
+C:\Users\anton.herzog\Projects\Pruefung_trunk\Pruefung\bin\x86\Debug\RettetDenWald.pdb
+C:\Users\anton.herzog\Projects\Pruefung_trunk\Pruefung\obj\x86\Debug\RettetDenWald.csprojResolveAssemblyReference.cache
+C:\Users\anton.herzog\Projects\Pruefung_trunk\Pruefung\obj\x86\Debug\RettetDenWald.exe
+C:\Users\anton.herzog\Projects\Pruefung_trunk\Pruefung\obj\x86\Debug\RettetDenWald.pdb
+C:\Users\anton.herzog\Projects\Pruefung_trunk\Pruefung\bin\x86\Debug\TestInput.txt
