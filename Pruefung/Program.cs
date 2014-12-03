@@ -1,38 +1,49 @@
 ﻿using System;
-using System.Net.Mime;
-using RettetDenWald.IO;
+using AufforstungMischwald.IO;
 
-namespace RettetDenWald
+namespace AufforstungMischwald
 {
-    class Program
+    /// <summary>
+    /// Startklasse.
+    /// Leitet die Eingabeparameter in die entsprechenden Programmteile weiter.
+    /// </summary>
+    internal class Program
     {
         private const string Usagestring = "usage: RettetDenWald.exe <pathToInputFile>";
+        private const string NoFileFoundString= "There was no file found under the given path. Maybe a typo?";
+        private const string FileWrongFormatString= "The file has a wrong format. See Readme for proper format informations.";
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            //Überprüfung des Parameterarrays
             if (args.Length != 1)
             {
                 Console.WriteLine(Usagestring);
-                Console.ReadKey();
                 return;
             }
 
             string path = args[0];
 
             ValidationResult validationResult = FileValidator.Validate(path);
-            if (validationResult!=ValidationResult.Ok)
-            {
-                //switch (validationResult)
-                //{
-                        
-                //}
-            }
+                switch (validationResult)
+                {
+                    //Sonderfälle
+                    case ValidationResult.NoFileFound:
+                        Console.WriteLine(NoFileFoundString);
+                        break;
+                    case ValidationResult.WrongFormat:
+                        Console.WriteLine(FileWrongFormatString);
+                        break;
 
-            Simulation sim = FileReader.Read(path);
+                    //Normalfall
+                    case ValidationResult.Ok:
+                        Simulation sim = FileReader.Read(path);
 
-            sim.Simuliere();
+                        sim.Simuliere();
 
-            FileWriter.Write(sim);
+                        FileWriter.Write(sim);
+                        break;
+                }
         }
     }
 }

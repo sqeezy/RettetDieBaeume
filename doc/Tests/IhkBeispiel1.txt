@@ -1,0 +1,5 @@
+Christinenwaeldchen
+30 30	%Länge und Breite in Metern
+6	%Esche
+4	%Erle
+9	%Buche

@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace RettetDenWald.IO
+namespace AufforstungMischwald.IO
 {
+    /// <summary>
+    /// Klasse die das Format und das Vorhandensein einer Eingabedatei überprüft.
+    /// Liegt ein Problem mit einem dieser Aspekte vor wird eine entsprechende Nachricht an die Benutzende Klasse zurückgegeben.
+    /// </summary>
     internal static class FileValidator
     {
         public static ValidationResult Validate(string path)
@@ -55,12 +59,5 @@ namespace RettetDenWald.IO
             return result;
         }
 
-    }
-
-    internal enum ValidationResult
-    {
-        Ok,
-        WrongFormat,
-        NoFileFound
     }
 }

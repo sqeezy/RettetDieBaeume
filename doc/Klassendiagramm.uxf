@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>170</y>
+      <x>240</x>
+      <y>150</y>
       <w>260</w>
       <h>50</h>
     </coordinates>
@@ -19,8 +19,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>540</x>
-      <y>170</y>
+      <x>520</x>
+      <y>150</y>
       <w>250</w>
       <h>50</h>
     </coordinates>
@@ -34,13 +34,14 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1030</x>
-      <y>140</y>
+      <x>1010</x>
+      <y>120</y>
       <w>250</w>
-      <h>50</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>_FileWriter_
 --
+- FormatStringBaum : const string
 --
 _+Wrtie(sim:Simulation) : void_
 bg=green</panel_attributes>
@@ -49,8 +50,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1040</x>
-      <y>830</y>
+      <x>1020</x>
+      <y>850</y>
       <w>140</w>
       <h>80</h>
     </coordinates>
@@ -65,44 +66,52 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>390</y>
+      <x>480</x>
+      <y>350</y>
       <w>630</w>
-      <h>310</h>
+      <h>400</h>
     </coordinates>
     <panel_attributes>Simulation
 --
 - baumarten : SortedList&lt;Baumart&gt;
-- zuTestendeBaumpaare : List&lt;Tuple&lt;Baum,Baum&gt;&gt;
+- zuTestendeBaumpaare : List&lt; Tuple&lt;Baum,Baum&gt; &gt;
  
 --
 + Simulation(breite:double, hoehe:double, path:string, name:string, arten:IEnumerable&lt;Baumart&gt;)
 
 + Simuliere() : void
 + GetD(): double
++ GetBestD() : double
 + GetB(): double
 
-&lt;&lt;get&gt; + Breite : double
-&lt;&lt;get&gt; + Hoehe : doble
-&lt;&lt;get&gt; + Path : string
-&lt;&lt;get&gt; + WaldName : string
-&lt;&lt;get&gt; + ErgebnisBaeume : IEnumerable&lt;Baum&gt;
+&lt;&lt;get&gt;&gt; + Breite : double
+&lt;&lt;get&gt;&gt; + Hoehe : doble
+&lt;&lt;get&gt;&gt; + Path : string
+&lt;&lt;get&gt;&gt; + WaldName : string
+&lt;&lt;get&gt;&gt; + ErgebnisBaeume : IEnumerable&lt;Baum&gt;
 
+- BerechneValidePositionen(baumPaar:Tuple&lt;Baum,Baum&gt;, baumart: Baumart): List&lt;Position&gt;
 - PositionZulaessig(pos:Position, radius:double) : bool
 - PositioniereStartpaar(): void
-bg=orange</panel_attributes>
+- SortiereBaumarten() : void
+- IstValidePosition(): bool
+_- BaumComparison(a:Baum, b:Baum): int_
+bg=magenta</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
-      <y>70</y>
+      <x>690</x>
+      <y>10</y>
       <w>250</w>
-      <h>50</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>_Program_
 --
+- UsageString : const string
+- NoFileFoundString : const string
+- FileWrongFormatString : const string
 --
 +Main(argv:string[ ]) : void
 bg=magenta</panel_attributes>
@@ -111,24 +120,24 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>850</y>
+      <x>700</x>
+      <y>870</y>
       <w>200</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>Baum
 --
 --
-&lt;&lt;get,set&gt; + Art : Baumart
-&lt;&lt;get,set&gt; + Position : Position
+&lt;&lt;get,set&gt;&gt; + Art : Baumart
+&lt;&lt;get,set&gt;&gt; + Position : Position
 bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>820</y>
+      <x>380</x>
+      <y>840</y>
       <w>230</w>
       <h>130</h>
     </coordinates>
@@ -137,91 +146,91 @@ bg=cyan</panel_attributes>
 --
 + Baumart(index:int, radius:double)
 
-&lt;&lt;get&gt; + Index : int
-&lt;&lt;get&gt; + Radius : double
-&lt;&lt;get,set&gt; + Anzahl : int
+&lt;&lt;get&gt;&gt; + Index : int
+&lt;&lt;get&gt;&gt; + Radius : double
+&lt;&lt;get,set&gt;&gt; + Anzahl : int
 bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>380</x>
-      <y>80</y>
+      <x>360</x>
+      <y>20</y>
       <w>350</w>
-      <h>110</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0;330.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;10.0;50.0;330.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>110</y>
+      <x>710</x>
+      <y>100</y>
       <w>30</w>
-      <h>80</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>640</x>
-      <y>210</y>
-      <w>80</w>
-      <h>200</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-erzeugt
-m1=1</panel_attributes>
-    <additional_attributes>60.0;180.0;60.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>820</x>
-      <y>110</y>
-      <w>30</w>
-      <h>300</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-
-m1=1</panel_attributes>
-    <additional_attributes>10.0;280.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>950</x>
-      <y>80</y>
-      <w>230</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-ruft Write mit Simulation
-m1=1</panel_attributes>
-    <additional_attributes>140.0;60.0;140.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1030</x>
-      <y>180</y>
-      <w>40</w>
-      <h>230</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-
-m1=1</panel_attributes>
-    <additional_attributes>10.0;210.0;20.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>620</x>
-      <y>880</y>
+      <y>190</y>
+      <w>80</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+erzeugt
+m1=1</panel_attributes>
+    <additional_attributes>60.0;160.0;60.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>100</y>
+      <w>30</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>20</y>
+      <w>230</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ruft Write mit Simulation
+</panel_attributes>
+    <additional_attributes>140.0;100.0;140.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1020</x>
+      <y>180</y>
+      <w>30</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>900</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -233,8 +242,8 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>880</y>
+      <x>890</x>
+      <y>900</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -246,34 +255,34 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>690</y>
-      <w>50</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1
-m2=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>540</x>
-      <y>690</y>
+      <x>790</x>
+      <y>740</y>
       <w>50</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
-m2=1..n</panel_attributes>
+m2=0..n</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>740</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>270</y>
+      <x>60</x>
+      <y>130</y>
       <w>120</w>
       <h>100</h>
     </coordinates>
@@ -289,19 +298,19 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>210</y>
-      <w>30</w>
-      <h>80</h>
+      <x>170</x>
+      <y>160</y>
+      <w>90</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>70</y>
+      <x>230</x>
+      <y>260</y>
       <w>360</w>
       <h>50</h>
     </coordinates>
@@ -309,6 +318,67 @@ bg=green</panel_attributes>
 --
 _+ RemoveComments(lines:IEnumerable&lt;string&gt;):void_
 bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>370</x>
+      <y>190</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>190</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>360</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald
+--
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>470</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald.IO
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>580</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald.Model
+--
+bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

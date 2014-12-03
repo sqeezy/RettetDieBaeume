@@ -1,0 +1,1 @@
+for %%a in (*.txt) do RettetDenWald.exe %%a

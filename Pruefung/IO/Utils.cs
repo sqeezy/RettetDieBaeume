@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RettetDenWald.IO
+namespace AufforstungMischwald.IO
 {
+    /// <summary>
+    ///Utility-Klasse die aus einer Zeile der Eingabedatei alle Kommentare entfernen kann.
+    /// </summary>
     static class Utils
     {
         public static IEnumerable<string> RemoveComents(IEnumerable<string> lines)

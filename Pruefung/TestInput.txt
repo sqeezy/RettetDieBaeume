@@ -1,7 +1,5 @@
-﻿Christinenwäldchen
-500 200	% Breite und Länge in Metern
-12
-6
-4
-9
-3
+﻿Name % Testdatei für Entwicklungsvorgang
+500 500 %Breite und Länge
+3 %Esche
+2 %Erle
+4 %Buche

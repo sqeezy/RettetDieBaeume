@@ -1,5 +1,8 @@
-﻿namespace RettetDenWald.Model
+﻿namespace AufforstungMischwald.Model
 {
+    /// <summary>
+    /// Container der eine Position im zweidimensionalen Raum abbildet.
+    /// </summary>
     internal struct Position
     {
         public double X { get; set; }

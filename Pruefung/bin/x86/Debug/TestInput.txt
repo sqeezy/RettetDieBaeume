@@ -1,7 +1,0 @@
-﻿Christinenwäldchen
-500 200	% Breite und Länge in Metern
-12
-6
-4
-9
-3
