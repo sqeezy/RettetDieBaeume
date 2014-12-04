@@ -1,3 +1,3 @@
-Um die Testfälle simulieren zu lassen ist eine kompilierte Version des Programmes "AufforstungMischwald" im gleichen Verzeichnis notwendig.
-Mit Hilfe der "AlleSimulieren.bat"-Datei werden dann alle vorhandenen Dateien des Typs (*.txt) dem Programm übergeben.(Sequenziell)
+Um die TestfÃ¤lle simulieren zu lassen ist eine kompilierte Version des Programmes "AufforstungMischwald" im gleichen Verzeichnis notwendig.
+Mit Hilfe der "AlleSimulieren.bat"-Datei werden dann alle vorhandenen Dateien des Typs (*.in) dem Programm Ã¼bergeben.(Sequenziell)
 Ergebnisse sind dann unter < eingabedateiname >.plt zu finden.
