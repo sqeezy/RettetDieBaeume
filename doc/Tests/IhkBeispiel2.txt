@@ -1,7 +1,0 @@
-Snowdenforst
-500 200	%Länge und Breite in Metern
-12	%Eiche
-6	%Esche
-4	%Erle
-9	%Buche
-3	%Birke

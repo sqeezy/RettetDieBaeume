@@ -1,4 +1,0 @@
-Praktische Betrachtung 2
-100 200
-10
-1

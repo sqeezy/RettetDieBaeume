@@ -1,3 +1,0 @@
-Geometrische Betrachtung 8
-100 30	% Länge und Breite in Metern
-5		% Esche
