@@ -20,7 +20,7 @@ namespace AufforstungMischwald.IO
 
             var lines = new List<string>(File.ReadAllLines(path));
 
-            lines =  new List<string>(Utils.RemoveComents(lines));
+            lines = new List<string>(Utils.RemoveComments(lines));
 
             var result = ValidationResult.Ok;
 
@@ -33,9 +33,16 @@ namespace AufforstungMischwald.IO
             {
                 string[] lineOneSplit = lines[1].Split(' ');
                 double dummy;
+                if (lineOneSplit.Length != 2)
+                {
+                    result = ValidationResult.WrongFormat;
+                }
                 foreach (string s in lineOneSplit)
                 {
-                    double.TryParse(s, out dummy);
+                    if (!double.TryParse(s, out dummy))
+                    {
+                        result = ValidationResult.WrongFormat;
+                    }
                     if (dummy <= 0)
                     {
                         result = ValidationResult.WrongFormat;
@@ -44,7 +51,10 @@ namespace AufforstungMischwald.IO
 
                 for (int i = 2; i < lines.Count; i++)
                 {
-                    double.TryParse(lines[i], out dummy);
+                    if (!double.TryParse(lines[i], out dummy))
+                    {
+                        result = ValidationResult.WrongFormat;
+                    }
                     if (dummy <= 0)
                     {
                         result = ValidationResult.WrongFormat;
@@ -58,6 +68,5 @@ namespace AufforstungMischwald.IO
 
             return result;
         }
-
     }
 }

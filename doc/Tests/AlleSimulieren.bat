@@ -1,2 +1,2 @@
-for %%a in (*.txt) do AufforstungMischwald.exe %%a
+for %%a in (*.in) do AufforstungMischwald.exe %%a
 pause

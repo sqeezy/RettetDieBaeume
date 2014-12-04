@@ -14,7 +14,7 @@ namespace AufforstungMischwald.IO
     {
         private const string FormatStringBaum = "{0:0.0######} {1:0.0######} {2:0.0######} {3:0.0######}";
 
-        public static void Write(Simulation sim)
+        public static void Write(Simulation sim, string path)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace AufforstungMischwald.IO
                                               sim.GetD(),
                                               sim.GetBestD(),
                                               sim.GetB(),
-                                              sim.Laufzeit),
+                                              sim.Laufzeit.TotalSeconds),
                                 "plot '-' using 1:2:3:4 with circles lc var"
                             };
 
@@ -44,7 +44,7 @@ namespace AufforstungMischwald.IO
                                                                        baum.Art.Radius,
                                                                        baum.Art.Index)));
 
-                File.WriteAllLines(string.Format("{0}.plt", sim.Path), lines);
+                File.WriteAllLines(string.Format("{0}.plt", path), lines);
             }
             catch (IOException)
             {

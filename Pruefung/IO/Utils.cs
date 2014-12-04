@@ -10,7 +10,7 @@ namespace AufforstungMischwald.IO
     /// </summary>
     static class Utils
     {
-        public static IEnumerable<string> RemoveComents(IEnumerable<string> lines)
+        public static IEnumerable<string> RemoveComments(IEnumerable<string> lines)
         {
             var result = new List<string>();
             foreach (string s in lines)

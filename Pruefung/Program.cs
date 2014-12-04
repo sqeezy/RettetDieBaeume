@@ -11,7 +11,8 @@ namespace AufforstungMischwald
     {
         private const string Usagestring = "usage: RettetDenWald.exe <pathToInputFile>";
         private const string NoFileFoundString= "There was no file found under the given path. Maybe a typo?";
-        private const string FileWrongFormatString= "The file has a wrong format. See Readme for proper format informations.";
+        private const string FileWrongFormatString= "The file has a wrong format. See documentation for proper format informations.";
+        private const int MaximaleWiederholungen = 10;
 
         private static void Main(string[] args)
         {
@@ -25,25 +26,40 @@ namespace AufforstungMischwald
             string path = args[0];
 
             ValidationResult validationResult = FileValidator.Validate(path);
-                switch (validationResult)
+            if (validationResult == ValidationResult.Ok)
+            {
+                int durchgefuehrteSimulationen = 0;
+                while (true)//Wiederholtes simulieren sichert ab das ein gutes Ergebnis gefunden wird, wenn es eines gibt.
                 {
-                    //Sonderfälle
-                    case ValidationResult.NoFileFound:
-                        Console.WriteLine(NoFileFoundString);
-                        break;
-                    case ValidationResult.WrongFormat:
-                        Console.WriteLine(FileWrongFormatString);
-                        break;
-
-                    //Normalfall
-                    case ValidationResult.Ok:
                         Simulation sim = FileReader.Read(path);
 
-                        sim.Simuliere();
+                        sim.VerteileBaeume();
 
-                        FileWriter.Write(sim);
+                    durchgefuehrteSimulationen++;
+
+                    if (sim.GetB()/sim.GetD() > 0.5||durchgefuehrteSimulationen==MaximaleWiederholungen) //Ist die abgedeckte Fläche größer als 50% der Gesamtfläche?
+                    {
+                        FileWriter.Write(sim,path);
                         break;
+                    }
                 }
+            }
+            else
+            {
+                FehlerAusgabe(validationResult);
+            }
+        }
+
+        private static void FehlerAusgabe(ValidationResult validationResult)
+        {
+            if (validationResult==ValidationResult.NoFileFound)
+            {
+                    Console.WriteLine(NoFileFoundString);
+            }
+            else
+            {
+                    Console.WriteLine(FileWrongFormatString);
+            }
         }
     }
 }

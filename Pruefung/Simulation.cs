@@ -14,12 +14,12 @@ namespace AufforstungMischwald
         private const double Toleranz = 1e-5;
         private readonly double _breite;
         private readonly double _hoehe;
-        private readonly string _path;
         private readonly string _waldName;
         private readonly List<Baumart> _arten;
         private readonly List<Baum> _ergebnisBaeume;
         private readonly List<Tuple<Baum, Baum>> _zuTestendeBaumpare;
-        private double _laufzeit;
+        private readonly Random _random = new Random();
+        private TimeSpan _laufzeit;
 
         /// <summary>
         /// Konstruktor für zentrale Simulations-Engine
@@ -29,11 +29,10 @@ namespace AufforstungMischwald
         /// <param name="path">Der Pfad unter dem die Eingabedatei liegt.</param>
         /// <param name="waldName">Der Name des Waldstückes.</param>
         /// <param name="arten">Die Menge aller pflanzbaren Baumarten.</param>
-        public Simulation(double breite, double hoehe, string path, string waldName, IEnumerable<Baumart> arten)
+        public Simulation(double breite, double hoehe, string waldName, IEnumerable<Baumart> arten)
         {
             _breite = breite;
             _hoehe = hoehe;
-            _path = path;
             _waldName = waldName;
             _arten = new List<Baumart>(arten);
             _ergebnisBaeume = new List<Baum>();
@@ -55,17 +54,12 @@ namespace AufforstungMischwald
             get { return _hoehe; }
         }
 
-        public string Path
-        {
-            get { return _path; }
-        }
-
         public string WaldName
         {
             get { return _waldName; }
         }
 
-        public double Laufzeit
+        public TimeSpan Laufzeit
         {
             get { return _laufzeit; }
         }
@@ -102,11 +96,12 @@ namespace AufforstungMischwald
         /// <summary>
         /// Startet die Simulation mit den im Konstruktor definierten Parametern.
         /// Zentrales Element ist die Menge aller Baumpaare, aus welchen sich eventuell eine weitere Position eines Baumes errechnen lässt.
+        /// Diese Methode kann pro Instanz dieser Klasse nur einmal gerufen werden.
         /// </summary>
-        public void Simuliere()
+        public void VerteileBaeume()
         {
             PositioniereStartpaar();
-            
+
             //Zeitmessung
             DateTime start = DateTime.Now;
 
@@ -115,14 +110,19 @@ namespace AufforstungMischwald
             {
                 SortiereBaumarten();
 
-                //Dieser Aufruf hat zur Folge, dass zuerst "alte" Baumpaare untersucht werden und die Menge der bereits gepflanzten Bäume sich in die Breite entwickelt, anstatt einer Richtung zu folgen.
-                Tuple<Baum, Baum> untersuchtesTuple = _zuTestendeBaumpare.First();
-                
+                //Ein Auswürfeln ob man mit den "alten" oder den "neuen" Expansionspunkten fortfährt ist sinnvoll, da die wahrscheinlichkeit für ein terminieren des Algorithmus, vor einer Abdeckung des gesamten Feldes stark sinkt.
+                int index = _random.Next(0, 2) - 1;
+                if (index == -1)
+                {
+                    index = _zuTestendeBaumpare.Count - 1;
+                }
+                Tuple<Baum, Baum> testBaumpaar = _zuTestendeBaumpare[index];
+
                 //Da die Baumarten sortiert sind wird immer ein möglichst seltener Baum mit möglichst großem Radius gewählt, da dies am besten den geforderten Kriterien entspricht.
                 foreach (Baumart baumart in _arten)
                 {
                     //Mögliche Positionen werden bestimmt und validiert.
-                    List<Position> validePositionen = BerechneValidePositionen(untersuchtesTuple, baumart);
+                    List<Position> validePositionen = BerechneValidePositionen(testBaumpaar, baumart);
                     if (validePositionen.Count < 1)
                     {
                         continue;
@@ -136,20 +136,27 @@ namespace AufforstungMischwald
                                     };
 
                     //Die Menge der zu untersuchenden Bäume wird erweitert.
-                    _zuTestendeBaumpare.Add(new Tuple<Baum, Baum>(untersuchtesTuple.Item1, neuerBaum));
-                    _zuTestendeBaumpare.Add(new Tuple<Baum, Baum>(untersuchtesTuple.Item2, neuerBaum));
+                    _zuTestendeBaumpare.Add(new Tuple<Baum, Baum>(testBaumpaar.Item1, neuerBaum));
+                    _zuTestendeBaumpare.Add(new Tuple<Baum, Baum>(testBaumpaar.Item2, neuerBaum));
                     _ergebnisBaeume.Add(neuerBaum);
                     baumart.Anzahl++;
                     break;
                 }
 
                 //Das Baumpaar wurde untersucht und da jedes Baumpaar nur eine valide neue Position liefern kann, wird es aus der Untersuchungsmenge entfernt.
-                _zuTestendeBaumpare.Remove(untersuchtesTuple);
+                _zuTestendeBaumpare.Remove(testBaumpaar);
             }
 
             //Zeitmessung
-            TimeSpan end = DateTime.Now - start;
-            _laufzeit = end.TotalSeconds;
+            _laufzeit = DateTime.Now - start;
+        }
+
+        /// <summary>
+        /// Gibt bestmöglichen Wert des Simpson-Index zurück. Zu Vergleichszwecken.
+        /// </summary>
+        public double GetBestD()
+        {
+            return 1.0 - 1/(double) _arten.Count;
         }
 
         /// <summary>
@@ -188,7 +195,6 @@ namespace AufforstungMischwald
                         X = sX,
                         Y = sY
                     };
-
 
             //Bestimme genormten Richtungsvektor der von S auf M3 bzw. M3' zeigt
             double richtungsVektorX = (m2.Y - m1.Y);
@@ -333,6 +339,42 @@ namespace AufforstungMischwald
         /// </summary>
         private bool IstValidePosition(Position pos, double radius)
         {
+            if (!IstInnerhalbDesWaldes(pos, radius))
+            {
+                return false;
+            }
+
+            if (!UeberschneidetSichMitAnderenBaeumen(pos, radius))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool UeberschneidetSichMitAnderenBaeumen(Position pos, double radius)
+        {
+            foreach (Baum baum in _ergebnisBaeume)
+            {
+                double abstandsQuadrat = (pos.X - baum.Position.X)*(pos.X - baum.Position.X) +
+                                         (pos.Y - baum.Position.Y)*(pos.Y - baum.Position.Y);
+                double diff = abstandsQuadrat - (radius + baum.Art.Radius)*(radius + baum.Art.Radius);
+
+                //Der Versuch diesen Codeblock zu optimieren ,indem man das Ziehen der Wurzel durch ein Quadrieren der Gesamtgleichung auflöst und die Framework Funktion Math.Pow durch eine triviale Quadrierung
+                //ersetzt, erbrachte ca. 100% Leistungssteigerung
+
+                //double abstand = Math.Sqrt(Math.Pow(pos.X - baum.Position.X, 2) + Math.Pow(pos.Y - baum.Position.Y, 2));
+                //double diff = abstand - (radius + baum.Art.Radius);
+
+                if (diff < -Toleranz)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private bool IstInnerhalbDesWaldes(Position pos, double radius)
+        {
             double minX = pos.X - radius;
             double minY = pos.Y - radius;
             double maxX = pos.X + radius;
@@ -342,25 +384,7 @@ namespace AufforstungMischwald
             {
                 return false;
             }
-
-            foreach (Baum baum in _ergebnisBaeume)
-            {
-                double abstand = Math.Sqrt(Math.Pow(pos.X - baum.Position.X, 2) + Math.Pow(pos.Y - baum.Position.Y, 2));
-                double diff = abstand - (radius + baum.Art.Radius);
-                if (diff < -Toleranz)
-                {
-                    return false;
-                }
-            }
             return true;
-        }
-
-        /// <summary>
-        /// Gibt bestmöglichen Wert des Simpson-Index zurück. Zu Vergleichszwecken.
-        /// </summary>
-        public double GetBestD()
-        {
-            return 1.0 - 1/(double) _arten.Count;
         }
     }
 }

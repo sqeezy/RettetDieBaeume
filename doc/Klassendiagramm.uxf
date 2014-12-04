@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>240</x>
-      <y>150</y>
-      <w>260</w>
-      <h>50</h>
+      <x>1680</x>
+      <y>847</y>
+      <w>182</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>_FileValidator_
 --
@@ -19,10 +19,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>150</y>
-      <w>250</w>
-      <h>50</h>
+      <x>1876</x>
+      <y>847</y>
+      <w>175</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>_FileReader_
 --
@@ -34,10 +34,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
-      <y>120</y>
-      <w>250</w>
-      <h>70</h>
+      <x>2149</x>
+      <y>840</y>
+      <w>175</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>_FileWriter_
 --
@@ -50,10 +50,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>850</y>
-      <w>140</w>
-      <h>80</h>
+      <x>2226</x>
+      <y>1302</y>
+      <w>98</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;struct&gt;&gt;
 Position
@@ -66,10 +66,10 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>350</y>
-      <w>630</w>
-      <h>400</h>
+      <x>1848</x>
+      <y>966</y>
+      <w>441</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>Simulation
 --
@@ -102,10 +102,10 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>690</x>
-      <y>10</y>
-      <w>250</w>
-      <h>100</h>
+      <x>1995</x>
+      <y>763</y>
+      <w>175</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>_Program_
 --
@@ -120,10 +120,10 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>870</y>
-      <w>200</w>
-      <h>70</h>
+      <x>2002</x>
+      <y>1316</y>
+      <w>140</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>Baum
 --
@@ -136,10 +136,10 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>380</x>
-      <y>840</y>
-      <w>230</w>
-      <h>130</h>
+      <x>1778</x>
+      <y>1295</y>
+      <w>161</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>Baumart
 --
@@ -155,84 +155,84 @@ bg=cyan</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>20</y>
-      <w>350</w>
-      <h>150</h>
+      <x>1764</x>
+      <y>798</y>
+      <w>245</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;50.0;330.0;10.0</additional_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0;330.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>710</x>
-      <y>100</y>
-      <w>30</w>
-      <h>70</h>
+      <x>2009</x>
+      <y>826</y>
+      <w>21</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>190</y>
-      <w>80</w>
-      <h>180</h>
+      <x>1946</x>
+      <y>875</y>
+      <w>56</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 erzeugt
 m1=1</panel_attributes>
-    <additional_attributes>60.0;160.0;60.0;110.0;10.0;110.0;10.0;10.0</additional_attributes>
+    <additional_attributes>60.0;130.0;60.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
-      <y>100</y>
-      <w>30</w>
-      <h>270</h>
+      <x>2072</x>
+      <y>826</y>
+      <w>21</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
 m1=1</panel_attributes>
-    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>930</x>
-      <y>20</y>
-      <w>230</w>
-      <h>120</h>
+      <x>2163</x>
+      <y>770</y>
+      <w>140</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 ruft Write mit Simulation
 </panel_attributes>
-    <additional_attributes>140.0;100.0;140.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>110.0;100.0;110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1020</x>
-      <y>180</y>
-      <w>30</w>
-      <h>190</h>
+      <x>2226</x>
+      <y>882</y>
+      <w>21</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 
 m1=1</panel_attributes>
-    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>900</y>
-      <w>120</w>
-      <h>40</h>
+      <x>1932</x>
+      <y>1337</y>
+      <w>84</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
@@ -242,10 +242,10 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>890</x>
-      <y>900</y>
-      <w>150</w>
-      <h>40</h>
+      <x>2135</x>
+      <y>1337</y>
+      <w>105</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
@@ -255,36 +255,36 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>790</x>
-      <y>740</y>
-      <w>50</w>
-      <h>150</h>
+      <x>2065</x>
+      <y>1239</y>
+      <w>35</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>740</y>
-      <w>50</w>
-      <h>120</h>
+      <x>1876</x>
+      <y>1239</y>
+      <w>35</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=1..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>130</y>
-      <w>120</w>
-      <h>100</h>
+      <x>1568</x>
+      <y>833</y>
+      <w>84</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>&lt;&lt;enum&gt;&gt;
 ValidationResults
@@ -298,21 +298,21 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>160</y>
-      <w>90</w>
-      <h>30</h>
+      <x>1645</x>
+      <y>854</y>
+      <w>49</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>260</y>
-      <w>360</w>
-      <h>50</h>
+      <x>1673</x>
+      <y>903</y>
+      <w>252</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>Utils
 --
@@ -323,32 +323,32 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>190</y>
-      <w>30</w>
-      <h>90</h>
+      <x>1771</x>
+      <y>875</y>
+      <w>21</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>190</y>
-      <w>30</w>
-      <h>90</h>
+      <x>1883</x>
+      <y>875</y>
+      <w>21</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>70</x>
-      <y>360</y>
-      <w>230</w>
-      <h>100</h>
+      <x>1561</x>
+      <y>1008</y>
+      <w>161</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>AufforstungMischwald
 --
@@ -358,10 +358,10 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>70</x>
-      <y>470</y>
-      <w>230</w>
-      <h>100</h>
+      <x>1561</x>
+      <y>1085</y>
+      <w>161</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>AufforstungMischwald.IO
 --
@@ -371,14 +371,790 @@ bg=green</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>70</x>
-      <y>580</y>
-      <w>230</w>
-      <h>100</h>
+      <x>1561</x>
+      <y>1162</y>
+      <w>161</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>AufforstungMischwald.Model
 --
 bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1540</x>
+      <y>987</y>
+      <w>203</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Namespaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>273</x>
+      <y>35</y>
+      <w>182</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>_FileValidator_
+--
+--
+_+Validate(path:string) : ValidationResult_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>154</y>
+      <w>175</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>_FileReader_
+--
+--
+_+Read(path:string) : Simulation_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>105</y>
+      <w>175</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>_FileWriter_
+--
+- FormatStringBaum : const string
+--
+_+Wrtie(sim:Simulation) : void_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>343</y>
+      <w>98</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;struct&gt;&gt;
+Position
+--
+&lt;&lt;get,set&gt;&gt;+X : double
+&lt;&lt;get,set&gt;&gt;+Y : double
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>574</x>
+      <y>231</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Simulation
+--
+...
+--
+...
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>28</y>
+      <w>175</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Program_
+--
+- UsageString : const string
+- NoFileFoundString : const string
+- FileWrongFormatString : const string
+--
++Main(argv:string[ ]) : void
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>357</y>
+      <w>140</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Baum
+--
+--
+&lt;&lt;get,set&gt;&gt; + Art : Baumart
+&lt;&lt;get,set&gt;&gt; + Position : Position
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>364</x>
+      <y>336</y>
+      <w>161</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Baumart
+--
+--
++ Baumart(index:int, radius:double)
+
+&lt;&lt;get&gt;&gt; + Index : int
+&lt;&lt;get&gt;&gt; + Radius : double
+&lt;&lt;get,set&gt;&gt; + Anzahl : int
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>63</y>
+      <w>161</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>91</y>
+      <w>175</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;230.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>182</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+erzeugt
+m1=1</panel_attributes>
+    <additional_attributes>280.0;80.0;280.0;20.0;230.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>665</x>
+      <y>91</y>
+      <w>21</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>35</y>
+      <w>140</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ruft Write mit Simulation
+</panel_attributes>
+    <additional_attributes>110.0;100.0;110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>147</y>
+      <w>168</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;120.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>378</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>378</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>280</y>
+      <w>42</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>462</x>
+      <y>280</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>147</x>
+      <y>0</y>
+      <w>84</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+ValidationResults
+--
+Ok
+NoFileFound
+WrongFileFormat
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>182</x>
+      <y>63</y>
+      <w>35</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>266</x>
+      <y>84</y>
+      <w>182</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Utils
+--
+_+ RemoveComments(lines:IEnumerable&lt;string&gt;):void_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>63</y>
+      <w>21</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>343</x>
+      <y>119</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>154</x>
+      <y>273</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald
+--
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>154</x>
+      <y>350</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald.IO
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>154</x>
+      <y>427</y>
+      <w>161</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald.Model
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>133</x>
+      <y>252</y>
+      <w>203</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Namespaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>1071</y>
+      <w>133</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>_FileValidator_
+--
+--
+_+Validate(path:string)_
+_: ValidationResult_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>532</x>
+      <y>1085</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>_FileReader_
+--
+--
+_+Read(path:string) : Simulation_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>686</x>
+      <y>1085</y>
+      <w>112</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>_FileWriter_
+--
+- FormatStringBaum 
+                : const string
+--
+_+Wrtie(sim:Simulation)_
+                : void
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>1540</y>
+      <w>63</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;struct&gt;&gt;
+Position
+--
++X : double
++Y : double
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>1225</y>
+      <w>448</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Simulation
+--
+- baumarten : SortedList&lt;Baumart&gt;
+- zuTestendeBaumpaare : List&lt; Tuple&lt;Baum,Baum&gt; &gt;
+--
++ Simulation(breite:double, hoehe:double, path:string, name:string, arten:IEnumerable&lt;Baumart&gt;)
+
++ Simuliere() : void
++ GetD(): double
++ GetBestD() : double
++ GetB(): double
+
+&lt;&lt;get&gt;&gt; + Breite : double
+&lt;&lt;get&gt;&gt; + Hoehe : doble
+&lt;&lt;get&gt;&gt; + Path : string
+&lt;&lt;get&gt;&gt; + WaldName : string
+&lt;&lt;get&gt;&gt; + ErgebnisBaeume : IEnumerable&lt;Baum&gt;
+
+- BerechneValidePositionen(baumPaar:Tuple&lt;Baum,Baum&gt;, baumart: Baumart): List&lt;Position&gt;
+- PositionZulaessig(pos:Position, radius:double) : bool
+- PositioniereStartpaar(): void
+- SortiereBaumarten() : void
+- IstValidePosition(): bool
+_- BaumComparison(a:Baum, b:Baum): int_
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>987</y>
+      <w>455</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_Program_
+--
+- UsageString : const string
+- NoFileFoundString : const string
+- FileWrongFormatString : const string
+--
++Main(argv:string[ ]) : void
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>1540</y>
+      <w>140</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Baum
+--
+--
+&lt;&lt;get,set&gt;&gt; + Art : Baumart
+&lt;&lt;get,set&gt;&gt; + Position : Position
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>1540</y>
+      <w>161</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Baumart
+--
+--
++ Baumart(index:int, radius:double)
+
+&lt;&lt;get&gt;&gt; + Index : int
+&lt;&lt;get&gt;&gt; + Radius : double
+&lt;&lt;get,set&gt;&gt; + Anzahl : int
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>1050</y>
+      <w>21</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1050</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>644</x>
+      <y>1113</y>
+      <w>49</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+   erzeugt
+m1=1</panel_attributes>
+    <additional_attributes>30.0;160.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>1050</y>
+      <w>35</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+startet
+m1=1</panel_attributes>
+    <additional_attributes>20.0;250.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>686</x>
+      <y>1050</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ruft Write mit Simulation
+</panel_attributes>
+    <additional_attributes>80.0;50.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>1155</y>
+      <w>21</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+m1=1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>539</x>
+      <y>1561</y>
+      <w>63</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>1561</y>
+      <w>63</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>651</x>
+      <y>1484</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>469</x>
+      <y>1484</y>
+      <w>35</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>1141</y>
+      <w>84</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+ValidationResults
+--
+Ok
+NoFileFound
+WrongFileFormat
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>392</x>
+      <y>1113</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>483</x>
+      <y>1148</y>
+      <w>154</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Utils
+--
+_+ RemoveComments_
+_(lines:IEnumerable&lt;string&gt;):void_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>1113</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>581</x>
+      <y>1113</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>392</x>
+      <y>945</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald
+--
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>539</x>
+      <y>945</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald.IO
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>686</x>
+      <y>945</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>AufforstungMischwald.Model
+--
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>924</y>
+      <w>455</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Namespaces</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

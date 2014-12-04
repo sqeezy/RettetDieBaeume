@@ -1,5 +1,6 @@
-﻿Name % Testdatei für Entwicklungsvorgang
-500 500 %Breite und Länge
-3 %Esche
-2 %Erle
-4 %Buche
+﻿FalschesFormatWald
+30
+1
+2
+3
+4
