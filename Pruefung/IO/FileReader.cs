@@ -30,7 +30,7 @@ namespace AufforstungMischwald.IO
             //Erzeuge Baumarten
             for (int i = 2; i < lines.Count; i++)
             {
-                double radius=double.Parse(lines[i]);
+                double radius = double.Parse(lines[i]);
                 arten.Add(new Baumart(i - 2, radius));
             }
 

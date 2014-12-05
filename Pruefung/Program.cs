@@ -10,8 +10,11 @@ namespace AufforstungMischwald
     internal class Program
     {
         private const string Usagestring = "usage: RettetDenWald.exe <pathToInputFile>";
-        private const string NoFileFoundString= "There was no file found under the given path. Maybe a typo?";
-        private const string FileWrongFormatString= "The file has a wrong format. See documentation for proper format informations.";
+        private const string NoFileFoundString = "There was no file found under the given path. Maybe a typo?";
+
+        private const string FileWrongFormatString =
+            "The file has a wrong format. See documentation for proper format informations.";
+
         private const int MaximaleWiederholungen = 10;
 
         private static void Main(string[] args)
@@ -29,17 +32,17 @@ namespace AufforstungMischwald
             if (validationResult == ValidationResult.Ok)
             {
                 int durchgefuehrteSimulationen = 0;
-                while (true)//Wiederholtes simulieren sichert ab das ein gutes Ergebnis gefunden wird, wenn es eines gibt.
+                while (true) //Wiederholtes simulieren sichert ab das ein gutes Ergebnis gefunden wird, wenn es eines gibt.
                 {
-                        Simulation sim = FileReader.Read(path);
+                    Simulation sim = FileReader.Read(path);
 
-                        sim.VerteileBaeume();
+                    sim.VerteileBaeume();
 
                     durchgefuehrteSimulationen++;
 
-                    if (sim.GetB()/sim.GetD() > 0.5||durchgefuehrteSimulationen==MaximaleWiederholungen) //Ist die abgedeckte Fläche größer als 50% der Gesamtfläche?
+                    if (sim.GetB()/sim.GetD() > 0.5 || durchgefuehrteSimulationen == MaximaleWiederholungen) //Ist die abgedeckte Fläche größer als 50% der Gesamtfläche?
                     {
-                        FileWriter.Write(sim,path);
+                        FileWriter.Write(sim, path);
                         break;
                     }
                 }
@@ -52,13 +55,13 @@ namespace AufforstungMischwald
 
         private static void FehlerAusgabe(ValidationResult validationResult)
         {
-            if (validationResult==ValidationResult.NoFileFound)
+            if (validationResult == ValidationResult.NoFileFound)
             {
-                    Console.WriteLine(NoFileFoundString);
+                Console.WriteLine(NoFileFoundString);
             }
             else
             {
-                    Console.WriteLine(FileWrongFormatString);
+                Console.WriteLine(FileWrongFormatString);
             }
         }
     }

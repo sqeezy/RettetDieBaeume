@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace AufforstungMischwald.IO
 {
     /// <summary>
     ///Utility-Klasse die aus einer Zeile der Eingabedatei alle Kommentare entfernen kann.
     /// </summary>
-    static class Utils
+    internal static class Utils
     {
         public static IEnumerable<string> RemoveComments(IEnumerable<string> lines)
         {
@@ -22,11 +21,11 @@ namespace AufforstungMischwald.IO
 
         private static string RemoveCommentFromLine(string line)
         {
-                if (line.Contains("%"))
-                {
-                    int indexOfComment = line.IndexOf("%", StringComparison.Ordinal);
-                    return line.Remove(indexOfComment);
-                }
+            if (line.Contains("%"))
+            {
+                int indexOfComment = line.IndexOf("%", StringComparison.Ordinal);
+                return line.Remove(indexOfComment);
+            }
             return line;
         }
     }
